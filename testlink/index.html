@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskLite — To Do</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="todo">
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__title">TaskLite</div>
+        <nav class="tabs">
+          <a href="index.html" class="tab active">To Do</a>
+          <a href="kanban.html" class="tab">Kanban</a>
+          <a href="habits.html" class="tab">Привычки</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container container-task">
+      <h1 class="page-title">Задачи</h1>
+      <form class="form-add">
+        <input
+          class="form-add__input"
+          type="text"
+          placeholder="Введите задачу"
+        />
+        <button class="form-add__button" type="submit">Добавить</button>
+      </form>
+
+      <div class="toolbar">
+        <input class="toolbar__search" type="text" placeholder="Поиск задач…" />
+
+        <div class="tabs toolbar__tabs">
+          <button class="tabs__item tabs__item--active" type="button">
+            Все
+          </button>
+          <button class="tabs__item" type="button">Активные</button>
+          <button class="tabs__item" type="button">Завершённые</button>
+        </div>
+
+        <select class="toolbar__sort">
+          <option>Сначала старые</option>
+          <option selected>Сначала новые</option>
+          <option>Название A→Z</option>
+          <option>Название Z→A</option>
+        </select>
+      </div>
+      <div class="tasks"></div>
+
+      <div class="footer-controls">
+        <div class="footer-controls__counters">
+          <span>Всего: 1</span>
+          <span>Активных: 1</span>
+          <span>Выполненных: 0</span>
+        </div>
+        <button
+          class="button button--clear footer-controls__clear"
+          type="button"
+        >
+          Очистить выполненные
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
