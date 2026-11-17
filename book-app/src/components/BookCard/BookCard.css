@@ -1,0 +1,58 @@
+const Card = styled.div`
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const Cover = styled.div`
+  height: 200px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  margin-bottom: 0.5rem;
+`;
+
+const CoverTitle = styled.h3`
+  margin: 0;
+  font-size: 1.2rem;
+`;
+
+const Title = styled.h2`
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+`;
+
+const Author = styled.p`
+  margin: 0 0 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+`;
+
+const Badge = styled.span`
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  ${({ status }: { status: 'read' | 'reading' | 'to-read' }) => {
+    if (status === 'read') return 'background-color: #2ecc71;';
+    if (status === 'reading') return 'background-color: #3498db;';
+    return 'background-color: #95a5a6;';
+  }}
+`;
+
+const Info = styled.div`
+  margin-top: 0.5rem;
+`;
+
+const Stars = styled.span`
+  color: #f1c40f;
+  font-weight: bold;
+`;
